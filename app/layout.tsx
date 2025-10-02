@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ClientLayout } from "@/components/layout/ClientLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "REAL - AI That Awakens Possibilities",
-  description: "Experience the future of intelligent assistance with REAL's advanced AI platform and LEA assistant",
+  description: "Witness the evolution of artificial intelligence through five transformative phases. Experience REAL's AI assistant LEA as it awakens, learns, and transcends.",
 };
 
 export default function RootLayout({
@@ -29,9 +28,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
         suppressHydrationWarning
       >
-        <ClientLayout>
-          {children}
-        </ClientLayout>
+        {children}
       </body>
     </html>
   );
