@@ -101,19 +101,19 @@ export function ScrollBasedContent({ containerRef, currentPhase }: ScrollBasedCo
             }`}>
               <div className="max-w-lg">
                 {/* Label */}
-                <div className="mb-4">
-                  <span className="inline-block px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-semibold tracking-wider uppercase">
+                <div className="mb-3">
+                  <span className="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-xs font-semibold tracking-wider uppercase">
                     Phase {phase.id + 1}: {phase.label}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent leading-tight">
+                <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-white to-cyan-300 bg-clip-text text-transparent leading-tight drop-shadow-lg">
                   {phase.title}
                 </h2>
 
                 {/* Description */}
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-100 leading-relaxed drop-shadow-md">
                   {phase.description}
                 </p>
 
