@@ -74,15 +74,15 @@ export function CameraRig({ scrollProgress }: CameraRigProps) {
   }, [scrollProgress, camera]);
 
   useFrame(() => {
-    // Smoothly move camera to target position
-    camera.position.lerp(targetPosition.current, 0.1);
+    // Smoothly move camera to target position (reduced lerp for smoother, more cinematic movement)
+    camera.position.lerp(targetPosition.current, 0.04);
     
-    // Smoothly rotate camera to look at target
+    // Smoothly rotate camera to look at target (reduced lerp for butter-smooth rotation)
     const currentLookAt = new Vector3();
     camera.getWorldDirection(currentLookAt);
     currentLookAt.multiplyScalar(10).add(camera.position);
     
-    currentLookAt.lerp(targetLookAt.current, 0.1);
+    currentLookAt.lerp(targetLookAt.current, 0.04);
     camera.lookAt(currentLookAt);
   });
 

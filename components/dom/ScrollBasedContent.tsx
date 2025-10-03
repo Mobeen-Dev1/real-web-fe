@@ -93,7 +93,7 @@ export function ScrollBasedContent({ containerRef, currentPhase }: ScrollBasedCo
         return (
           <div
             key={phase.id}
-            className={`fixed inset-0 flex items-center pointer-events-none transition-opacity duration-300`}
+            className={`fixed inset-0 flex items-center pointer-events-none transition-opacity duration-1000 ease-in-out`}
             style={{ opacity }}
           >
             <div className={`w-full max-w-7xl mx-auto px-12 flex items-center ${

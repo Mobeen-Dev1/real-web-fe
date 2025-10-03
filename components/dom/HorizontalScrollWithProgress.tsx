@@ -174,7 +174,7 @@ export function HorizontalScrollWithProgress({ onPhaseChange, onScrollProgress }
               aria-label={`Go to phase ${index + 1}`}
             >
               <div
-                className={`w-3 h-3 rounded-full transition-all duration-500 ${
+                className={`w-3 h-3 rounded-full transition-all duration-700 ease-in-out ${
                   index === currentPhase
                     ? 'bg-cyan-400 scale-125 shadow-lg shadow-cyan-400/50'
                     : index < currentPhase
@@ -183,7 +183,7 @@ export function HorizontalScrollWithProgress({ onPhaseChange, onScrollProgress }
                 }`}
               />
 
-              <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+              <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
                 <span className="text-xs text-gray-400">Phase {index + 1}</span>
               </div>
             </button>
@@ -191,7 +191,7 @@ export function HorizontalScrollWithProgress({ onPhaseChange, onScrollProgress }
             {/* Only show connecting line BETWEEN dots, not after the last dot */}
             {index < 4 && (
               <div
-                className={`w-12 h-0.5 mx-3 transition-all duration-500 ${
+                className={`w-12 h-0.5 mx-3 transition-all duration-700 ease-in-out ${
                   index < currentPhase
                     ? 'bg-gradient-to-r from-cyan-600/50 to-cyan-600/30'
                     : 'bg-gray-600/20'
